@@ -4,7 +4,7 @@ R functions allowing for the assessment of colocalization in a High-Througput fa
 requirements
 -----------
 
-The provided piece of code was tested on both Linux (Ubuntu 16.04) and Windows (Windows 7) distributions. It has not been tested on MACOS but should theoretically work. In any case, you will need to have the proper Java version (64 or 32 bits according to your machine) installed on your computer in the aim to have rJava package added to R.
+The provided piece of code was tested on both Linux (Ubuntu 16.04) and Windows (Windows 7) distributions. It has not been tested on Mac OS but should theoretically work. In any case, you will need to have the proper Java version (64 or 32 bits according to your machine) installed on your computer in the aim to have rJava package added to R.
 
 For Linux distributions, you might need to install additionnal packages such as fftw3 so that you can install the R tiff package:
 
@@ -36,7 +36,7 @@ Open RGui/RStudio and open the provided scripts ```GetImInfo.R```,```GetAllSQLIn
 
 - coloc.HTS(getImInfo(SQL.use = F)[[1]])
 
-A window will open to select the location of the images you want to analyze.
+A window will open to select the location of the images you want to analyze. If you want to see a more detailed description of the functions and their arguments, please refer to ```Function description.txt```
 
 file format
 ------------
