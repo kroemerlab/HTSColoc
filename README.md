@@ -34,9 +34,9 @@ usage
 ------------
 Open RGui/RStudio and open the provided scripts ```GetImInfo.R```,```GetAllSQLInfo-FAST.R```,```ColocPixelAnalysis_Func.R```. After sourcing each of them, you can type in the console :
 
-- coloc.HTS(getImInfo(SQL.use = F)[[1]])
+- coloc.HTS(getImInfo(SQL.use = F))
 
-A window will open to select the location of the images you want to analyze. If you want to see a more detailed description of the functions and their arguments, please refer to ```Function description.txt```
+A first window will open to select the location of the images you want to analyze. After selecting the folder in which results will be exported in a second window, the analysis willl start. If you want to see a more detailed description of the functions and their arguments, please refer to ```Function description.txt```
 
 file format
 ------------
