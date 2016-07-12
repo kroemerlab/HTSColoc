@@ -69,7 +69,7 @@ stopCluster(cl)
 #######################################
 
 MyImCl$Site = as.numeric(gsub('s','',MyImCl$Site))
-MyImCl$Channel = gsub('.TIF','',MyImCl$Channel)
+MyImCl$Channel = gsub('.TIF|.tiff|.tif','',MyImCl$Channel)
 MyImCl = cbind(MyIm = paste(PlateLoc, MyIm, sep='/'),MyImCl) 
 MyImCl = MyImCl[order(MyImCl$TimePoint,MyImCl$Well, MyImCl$Site),,drop=F]
 
