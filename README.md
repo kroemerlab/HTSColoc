@@ -47,3 +47,8 @@ file format
 
 For example, if you have acquired an image from the well A01 of a plate, on site 1, using the first channel of your microscope, its name should be ```MyExp_A01_s1_w1.TIF```
 
+- If you wish to analyze a timecourse experiment, images from each timepoint should be stored in a folder named TimePoint_*Time*, with the same nomenclature that described previously.
+
+For example, if you ran an experiment with 10 timepoints, images shall be stored in folders named ```TimePoint_1``` to ```TimePoint_10```. Obviously, each batch of images in each folder will have the same name.
+
+
