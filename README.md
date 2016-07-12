@@ -1,7 +1,7 @@
 # HTSColoc
 R functions allowing for the assessment of colocalization in a High-Througput fashion
 
-requirements
+Requirements
 -----------
 
 The provided piece of code was tested on both Linux (Ubuntu 16.04) and Windows (Windows 7) distributions. It has not been tested on Mac OS but should theoretically work. In any case, you will need to have the proper Java version (64 or 32 bits according to your machine) installed on your computer in the aim to have rJava package added to R.
@@ -11,7 +11,7 @@ For Linux distributions, you might need to install additionnal packages such as 
 - sudo apt-get install libfftw3-dev libfftw3-doc
 
 
-installation
+Installation
 ------------
 
 Before using the provided function you will obviously need to have R installed:
@@ -30,7 +30,7 @@ You will need to have a few packages installed. For doing so, open R and run the
 
 or simply source the InstallPackages.R after opening it with R.
 
-usage
+Usage
 ------------
 Open RGui/RStudio and open the provided scripts ```GetImInfo.R```,```GetAllSQLInfo-FAST.R```,```ColocPixelAnalysis_Func.R```. After sourcing each of them, you can type in the console :
 
@@ -38,7 +38,7 @@ Open RGui/RStudio and open the provided scripts ```GetImInfo.R```,```GetAllSQLIn
 
 A first window will open to select the location of the images you want to analyze. After selecting the folder in which results will be exported in a second window, the analysis willl start. If you want to see a more detailed description of the functions and their arguments, please refer to ```Function description.txt```
 
-file format
+File format
 ------------
 ```GetImInfo.R``` will only run with a specific nomenclature regarding images names.
 
