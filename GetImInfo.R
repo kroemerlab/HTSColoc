@@ -59,7 +59,7 @@ MyImCl<-foreach(IM = MyIm,i=icount() ,.packages = c("EBImage","tiff","reshape","
     }
   }else{
     if(TimeCourse ==T){
-      cbind(TimePoint=1,colsplit(IM,split='_',names=c('Name','Well','Site','Channel')))
+      cbind(TimePoint=as.numeric(gsub('TimePoint_','',unlist(strsplit(IM,'/'))[1])),colsplit(unlist(strsplit(IM,'/'))[2],split='_',names=c('Name','Well','Site','Channel')))
     }else{
       cbind(TimePoint=1,colsplit(IM,split='_',names=c('Name','Well','Site','Channel')))
   }
