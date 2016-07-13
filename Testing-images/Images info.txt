@@ -1,0 +1,4 @@
+Images were acquired on an automated IXM (Molecular Devices, Sunnyvale, USA) using a 20X objective, using DAPI, GFP and Texas Red channels.
+Cells in well E20 are U2OS stably expressing the fusion GALT-GFP protein, and were co-stained with Hoechst33342 & MitoTracker Orange (Life technologies).
+Cells in Well I06 are U2OS stably expressing the fusion MITO-RFP protein, and were co-stained with MitoTracker Green (Life Technologies)
+The two batches of images (E20 and I06) correspond to negative and postive control, respectively.
