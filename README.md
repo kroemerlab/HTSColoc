@@ -32,7 +32,7 @@ or simply source the InstallPackages.R after opening it with R.
 
 Usage
 ------------
-Open RGui/RStudio and open the provided scripts ```GetImInfo.R```,```GetAllSQLInfo-FAST.R```,```ColocPixelAnalysis_Func.R```. After sourcing each of them, you can type in the console :
+Open RGui/RStudio and open the provided scripts ```GetImInfo.R```,```GetAllSQLInfo-FAST.R```,```ColocPixelAnalysis_Func.R``` (in the ```Functions``` folder). After sourcing each of them, you can type in the console :
 
 - coloc.HTS(getImInfo(SQL.use = F))
 
@@ -62,3 +62,11 @@ Inside the choosen results location,  you should find 2 files and a serie of sub
 
 - Every subfolder (one per timepoint) contains directories named according to the wells that were acquired. Each well directory contains as many pdfs as they ares sites inside the well, and one image. The pdf shows the bi-parametric plot of pixel intensities in assesed channels, together with the associated colocalization parameters. The recorder image is a color-combined image from site 1, in which detected Green and Red signals are detected. This image can be useful to refine segmentation parameters (see ```Function description.txt```).
 
+Test
+------------
+
+Once installed, the suite can be tested on the provided test images in the ```Testing-images``` folder. Please refer to ```Images info.txt``` for more information about these images. After sourcing the R scripts, type in the console :
+
+- coloc.HTS(getImInfo(SQL.use = F), Cyto = 'Red')
+
+And select the folder where you stored the previously downloaded images.
