@@ -23,7 +23,7 @@ This coefficient is used to measure pixels co-occurence, and does not take into 
 noise ratio increases.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-3. Pixel Overlap Coefficient (Ov)
+4. Pixel Overlap Coefficient (Ov)
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This coefficient does correspond to the exact pixel co-occurrence, and is essentially based on signal segmentation, which makes its interpretation delicate. It is the simple ratio of the 
