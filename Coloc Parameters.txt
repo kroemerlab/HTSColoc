@@ -1,0 +1,42 @@
+#This file is aimed for an better understanding of colocalization assessment#
+#Correspondence can be adressed to allan.sauvat@gustaveroussy.fr#
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Pearson Correlation Coefficient (PCC)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+This coefficient is calculated according to pearson correlation formula, and is the same used than for non-image based assay. This is one of the most robust method to assess colocalization,
+since it is not segmentation-sensitive. However, it can reach its limits when signal to noise ratio increases. Its value range from -1 (anti-correlation) to 1 (perfect correlation).
+A coefficient close to O shows an absence of correlation.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. Intensity Correlation Quotient (ICQ)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+This coefficient has properties which are really close to PCC's, and ranges from -0.5 (anti-correlation) to 0.5 (perfect correlation). A coefficient close to O shows an absence of correlation.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Manders Overlap Coefficient (MOC)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+This coefficient is used to measure pixels co-occurence, and does not take into account pixel intensities variations. It is segmentation-sensitive, but less prompted to fluctuate when signal to 
+noise ratio increases.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Pixel Overlap Coefficient (Ov)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+This coefficient does correspond to the exact pixel co-occurrence, and is essentially based on signal segmentation, which makes its interpretation delicate. It is the simple ratio of the 
+intersection of detected object pixels between the two channels to their mathematical union.
+
+Two other Overlapping Coefficients can be calculated by computing the ratio to the total number of object pixels in one or the other channel (OvR or OvG), instead of their union. This gives specific
+information about one of the assessed molecules, which can entirely colocalize with the other in one specific location, when the latter distributes at different places.
+
+
+
+
+
+
+
+
+
