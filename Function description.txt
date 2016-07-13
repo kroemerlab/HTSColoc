@@ -1,0 +1,62 @@
+#This file is aimed for an advanced use of colocalization functions#
+#Correspondence can be adressed to allan.sauvat@gustaveroussy.fr#
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. GetAllSQLInfo-FAST
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+This function is only useful if you are analyzing images acquired using Molecular Devices MetaXpress software. 
+It will return a data frame containing plate information from the SQL MDCStore database, such as PlateID, MeasurementID, Description, and more importantly the images location.
+
+#Arguments#
+
+*SERVER : ODBC connexion (MDCStore by default)
+*coID : User name for ODBC connexion
+*coPD : Password for ODBC connexion
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. GetImInfo
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+This function retrieves and sort images to be analyzed according to their nomenclature (see README.md). It returns a data.frame containing Name, Time, Well, Site,and Channel image information.
+If use.SQL is set to TRUE, information are read from database after calling GetAllSQLInfo-FAST.
+
+#Arguments#
+
+* SERVER : ODBC connexion (MDCStore by default)
+* coID : User name for ODBC connexion
+* coPD : Password for ODBC connexion
+* SQL.use : Shall the function use an ODBC connexion ? If TRUE, PlateID argument is mandatory
+* PlateID : If SQL.use is set to TRUE, it corresponds to the plateID recorded in MDCStore database
+* PlateLoc : If SQL.use is set to FALSE, it corresponds to the images folder location. If TimeCourse is set to TRUE, it should be the root of TimePoint_i folders (see README.md)
+* TimeCourse : Is this a timecourse experiment ?
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. ColocPixelAnalysis_Func
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+This function constitutes the core of the analysis workflow. Its main argument is a data frame that contains images information, obtained using GetImInfo.
+
+#Arguments#
+
+* MyImCl : Images information. It should be a data.frame formatted as the one returned from GetImInfo function. 
+* Blue, Green, Red : Colors corresponding to channels 1,2 and 3, respectively. For the algorithm to run properly, the two channels that will be analyzed should be considered as Green an Red.
+	If only two channels were acquired, Blue should be left to 1. Still, the algorithm was designed so that Blue corresponds to Hoechst nuclear staining, and Green and Red to cytoplasmic channels
+	in which colocalization is assessed.
+* auto : Should the ROI definition (nuclear and cytoplasm masks) be automated or not ? If set to FALSE, the method will need w2OFF and w3OFF arguments for Green and Red segmentations, respectively.
+* Cyto : Channel with which cytoplasmic segmentation should be performed. Default is 'Green', but it can be set to 'Red' or 'Both' (Green and Red will be used for cytoplasm segmentation)
+* Nuc.rm : Shall the nuclear region be removed from the analysis ? If only two channels are acquired, it should be set to FALSE, since that argument uses Blue nuclear stain.
+* TopSize : TopHat filter size used for Green and Red signal enhancement.
+* w1OFF : offset (see "thresh" function from EBImage package) used for segmenting nucleus using Blue channel
+* w2OFF, w3OFF : if auto is set to FALSE, it corresponds to thresholds that will be used to detect Green and Red signals.
+* adj.prob : distribution used to scale images histogram distribution. Default is optimal for 16-bits images, but can be decreased if image depth decreases to 12 or 8 bits.
+* exportPath : Folder location where to export results. If not defined, the user will be prompted to select it when launching the function.
+
+
+
+
+
+
+
+
+
