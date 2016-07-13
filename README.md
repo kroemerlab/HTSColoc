@@ -51,4 +51,14 @@ For example, if you have acquired an image from the well A01 of a plate, on site
 
 For example, if you ran an experiment with 10 timepoints, images shall be stored in folders named ```TimePoint_1``` to ```TimePoint_10```. Obviously, each batch of images in each folder will have the same name.
 
+Results
+------------
+
+Inside the choosen results location,  you should find 2 files and a serie of subfolders in a folder called "Results".
+
+- The first file, *Results.csv*, is a comma-delimited table in which calculated colocalization parameters are recorded for each acquired site. A more detailed description of these parameters can be consulted in ```Coloc parameters.txt```.
+
+- The second, namely *Boxplot.pdf*, is an informative boxplot depicting summarized results well by well (grouping sites altogether)
+
+- Every subfolder (one per timepoint) contains directories named according to the wells that were acquired. Each well directory contains as many pdfs as they ares sites inside the well, and one image. The pdf shows the bi-parametric plot of pixel intensities in assesed channels, together with the associated colocalization parameters. The recorder image is a color-combined image from site 1, in which detected Green and Red signals are detected. This image can be useful to refine segmentation parameters (see ```Function description.txt```).
 
