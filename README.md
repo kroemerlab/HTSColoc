@@ -1,7 +1,7 @@
 # HTSColoc
 R functions allowing for the assessment of colocalization in a High-Througput fashion.
 
-PLEASE NOTE THAT THIS FUNCTIONS SET IS OBSOLETE. PLEASE REFER TO "ColocalizR" PACKAGE FOR IMPROVED COLOCALIZATION ANALYSIS
+:warning: PLEASE NOTE THAT THIS FUNCTIONS SET IS OBSOLETE. PLEASE REFER TO "ColocalizR" PACKAGE FOR IMPROVED COLOCALIZATION ANALYSIS :warning:
 
 Requirements
 -----------
